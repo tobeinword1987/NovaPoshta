@@ -31,8 +31,6 @@ Class Router {
         if (empty($route)) {
 			$route = 'index'; 
 		}
-
-//		echo "route=".$route;
 		
         // Получаем части урла
         $route = rtrim($route, '/\\');
@@ -60,7 +58,6 @@ Class Router {
 
 		// если урле не указан контролер, то испольлзуем поумолчанию index
 
-//		echo "  controller=".$controller;
         if (empty($controller)) {
 			$controller = 'index'; 
 		}
@@ -72,11 +69,8 @@ Class Router {
 			$action = 'index'; 
 		}
 
-//		echo " action=".$action;
-
         $file = $cmd_path . $controller . '.php';
-
-//		echo "  file=".$file;
+		
         $args = $parts;
 	}
 	
